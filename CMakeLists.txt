@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(ransac_like_based_filtering)
+find_package(PCL 1.2 REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
+include_directories(. glib)
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+add_subdirectory(glib)
+add_executable (ransac_like_based_filtering main.cpp ransac_like_based_filtering.cpp)
+target_link_libraries (ransac_like_based_filtering ${PCL_LIBRARIES})
+target_link_libraries (ransac_like_based_filtering GLIB)
