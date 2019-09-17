@@ -1,6 +1,6 @@
 #include "global.h"
 #include "ransac_like_based_filtering.h"
-
+#include "Entropy.h"
 
 int main(int argc, char** argv)
 {
@@ -11,6 +11,8 @@ int main(int argc, char** argv)
 		PCL_ERROR("Couldn't read file\n");
 		return (-1);
     }	  
+	
+	Entropy(cloud);
 	
 	// Normal Estimation 
 	//pcl::NormalEstimation<PointType, pcl::Normal> ne;
@@ -33,7 +35,7 @@ int main(int argc, char** argv)
 	}
 		
 	
-	ransac_based_filtering(cloud,cloud_normals);	
+	//ransac_based_filtering(cloud,cloud_normals);	
 	
 
   

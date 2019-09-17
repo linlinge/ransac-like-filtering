@@ -10,5 +10,6 @@
 #include <vector>
 #include <omp.h>
 #include <Eigen/Dense> 
+#include "V3.hpp"
 using namespace std;
 typedef pcl::PointXYZRGBA PointType;

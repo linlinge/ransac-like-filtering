@@ -7,6 +7,6 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 add_subdirectory(glib)
-add_executable (ransac_like_based_filtering main.cpp ransac_like_based_filtering.cpp)
+add_executable (ransac_like_based_filtering main.cpp ransac_like_based_filtering.cpp Entropy.cpp)
 target_link_libraries (ransac_like_based_filtering ${PCL_LIBRARIES})
 target_link_libraries (ransac_like_based_filtering GLIB)
